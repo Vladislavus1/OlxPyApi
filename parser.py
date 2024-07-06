@@ -135,9 +135,3 @@ class OlxParser:
                     raise MaxAttemptsReached()
         else:
             raise NotOlxUrlError(url)
-
-
-if __name__ == "__main__":
-    parser = OlxParser(logging=True)
-    products = parser.get_products("https://www.olx.kz/elektronika/")
-    print(len(products))
