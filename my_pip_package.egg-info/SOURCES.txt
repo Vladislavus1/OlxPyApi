@@ -1,0 +1,9 @@
+README.md
+exceptions.py
+parser.py
+setup.py
+my_pip_package.egg-info/PKG-INFO
+my_pip_package.egg-info/SOURCES.txt
+my_pip_package.egg-info/dependency_links.txt
+my_pip_package.egg-info/requires.txt
+my_pip_package.egg-info/top_level.txt
