@@ -120,8 +120,10 @@ class OlxParser:
                     return ads
                 else:
                     raise NoResultFoundError(url)
+            except NoResultFoundError:
+                raise
             except Exception as e:
-                if retries < max_retries:
+                if retries <= max_retries:
                     retries += 1
                     logs.append(str(e))
                     if self.logging:
