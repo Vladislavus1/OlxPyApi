@@ -40,12 +40,11 @@ class OlxAd:
 class OlxParser:
     def __init__(self, logging):
         self.logging = logging
+        self.retries = 0
+        self.max_retries = 1
+        self.logs = []
 
     def get_products(self, url):
-        retries = 0
-        max_retries = 1
-        logs = []
-
         base_url = url.split("/")
         base_url = base_url[0] + "//" + base_url[2]
         urls = []
@@ -123,15 +122,15 @@ class OlxParser:
             except NoResultFoundError:
                 raise
             except Exception as e:
-                if retries <= max_retries:
-                    retries += 1
-                    logs.append(str(e))
+                if self.retries <= self.max_retries:
+                    self.retries += 1
+                    self.logs.append(str(e))
                     if self.logging:
-                        print(f"\nParsing was interrupted due to error, restarting! (retry attempt: {retries})")
+                        print(f"\nParsing was interrupted due to error, restarting! (retry attempt: {self.retries})")
                     self.get_products(url)
                 else:
                     with open("error_logs.txt", "w", encoding="utf-8") as log:
-                        for log_row in logs:
+                        for log_row in self.logs:
                             log.write(log_row + "\n")
                         log.close()
                     raise MaxAttemptsReached()

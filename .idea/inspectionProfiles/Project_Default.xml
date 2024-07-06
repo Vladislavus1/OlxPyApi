@@ -1,0 +1,38 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="LanguageDetectionInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyBroadExceptionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyGlobalUndefinedInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W292" />
+          <option value="E122" />
+          <option value="E261" />
+          <option value="E501" />
+          <option value="E128" />
+          <option value="E722" />
+          <option value="E303" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnboundLocalVariableInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="cv2.*" />
+          <option value="project.blog.models.Answer.objects" />
+          <option value="project.blog.models.Question.objects" />
+          <option value="project.blog.models.Category.objects" />
+          <option value="blog.models.Question.objects" />
+          <option value="blog.models.Answer.objects" />
+          <option value="blog.models.Category.objects" />
+          <option value="blog.models.Question.object" />
+          <option value="app.blog.models.Message.objects" />
+          <option value="blog.models.Messages.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
