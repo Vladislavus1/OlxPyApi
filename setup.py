@@ -1,6 +1,6 @@
 from setuptools import setup
 
-__version__ = "1.0.0.0"
+__version__ = "0.0.1alpha"
 
 setup(
     name='OlxPyApi',
@@ -10,7 +10,7 @@ setup(
     author='Vladislavus1',
     author_email='vlydgames@gmail.com',
 
-    py_modules=['parser', 'exceptions'],
+    packages=['parser', 'exceptions'],
     install_requires=[
         'beautifulsoup4==4.12.3',
         'requests==2.31.0'
