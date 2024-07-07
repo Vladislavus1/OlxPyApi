@@ -11,6 +11,7 @@ setup(
     author_email='vlydgames@gmail.com',
 
     include_dirs=['OlxPyApi'],
+    py_modules=['parser', 'exceptions'],
     install_requires=[
         'beautifulsoup4==4.12.3',
         'requests==2.31.0'
