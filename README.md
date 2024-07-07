@@ -25,21 +25,21 @@ To start parsing products from OLX, you'll need to use ```OlxParser``` method ca
 
 After you run a code you should see this messages:
 
-    Parsing https://www.olx.ua/uk/elektronika/?page=1 (response code: 200) ✔
-    Parsing https://www.olx.ua/uk/elektronika/?page=2 (response code: 200) ✔
-    Parsing https://www.olx.ua/uk/elektronika/?page=3 (response code: 200) ✔
+    Parsing https://www.olx.ua/uk/elektronika/?page=1 (response code: 200) (done)
+    Parsing https://www.olx.ua/uk/elektronika/?page=2 (response code: 200) (done)
+    Parsing https://www.olx.ua/uk/elektronika/?page=3 (response code: 200) (done)
     ...
     
 This messages is saying that parsing ad's urls on each page is done successfully.
 After that you'll start to see this messages about "Getting information":
 
     Getting information:
-      • https://www.olx.ua/d/uk/obyavlenie/libertys-f12-m-b-2l-nova-kavomashina-prodazh-IDWkYXf.html ✔
-      • https://www.olx.ua/d/uk/obyavlenie/telefon-huawei-mate-30-pro-8-256gb-dual-IDWDPJw.html ✔
-      • https://www.olx.ua/d/uk/obyavlenie/novinka-bezdrotov-navushniki-arpods-3-groskop-chp-huilian-a10-IDUyrz1.html ✔
-      • https://www.olx.ua/d/uk/obyavlenie/prodam-aparat-uf-vipromnyuvannya-novator-IDTzLdy.html ✔
-      • https://www.olx.ua/d/uk/obyavlenie/blok-zhivlennya-12v-dlya-led-jinbo-jlv-12400kb-IDPSL4Y.html ✔
-      • https://www.olx.ua/d/uk/obyavlenie/detskiy-ingalyator-kompressornyy-microlife-neb-400-IDWeuv6 ✔
+      • https://www.olx.ua/d/uk/obyavlenie/libertys-f12-m-b-2l-nova-kavomashina-prodazh-IDWkYXf.html (done)
+      • https://www.olx.ua/d/uk/obyavlenie/telefon-huawei-mate-30-pro-8-256gb-dual-IDWDPJw.html (done)
+      • https://www.olx.ua/d/uk/obyavlenie/novinka-bezdrotov-navushniki-arpods-3-groskop-chp-huilian-a10-IDUyrz1.html (done)
+      • https://www.olx.ua/d/uk/obyavlenie/prodam-aparat-uf-vipromnyuvannya-novator-IDTzLdy.html (done)
+      • https://www.olx.ua/d/uk/obyavlenie/blok-zhivlennya-12v-dlya-led-jinbo-jlv-12400kb-IDPSL4Y.html (done)
+      • https://www.olx.ua/d/uk/obyavlenie/detskiy-ingalyator-kompressornyy-microlife-neb-400-IDWeuv6 (done)
       ...
 
 Now your programm is on a phase where main information is picking.
