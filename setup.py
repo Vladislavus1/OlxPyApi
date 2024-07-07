@@ -12,7 +12,7 @@ setup(
 
     py_modules=['parser', 'exceptions'],
     install_requires=[
-        'beautifulsoup4==0.0.2',
+        'beautifulsoup4==4.12.3',
         'requests==2.31.0'
     ],
 )
