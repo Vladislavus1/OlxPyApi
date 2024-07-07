@@ -1,4 +1,4 @@
-# OlxPyApi
+# [OlxPyApi](https://pypi.org/project/OlxPyApi/)
 
 This package simplifies the extraction of data from OLX websites ([olx.ua](https://www.olx.ua), [olx.pl](https://www.olx.pl), [olx.kz](https://www.olx.kz)). It allows users to programmatically retrieve listings, such as real estate, vehicles, or job offers, directly from OLX.
 
@@ -6,7 +6,7 @@ This package simplifies the extraction of data from OLX websites ([olx.ua](https
 
 First of all you need to download this package to your computer system by doing this command:
 
-    pip install git+https://github.com/Vladislavus1/OlxPyApi#egg=OlxPyApi
+    pip install OlxPyApi
 
 Now it's ready to work. In your python file, you'll need to import this package:
 
