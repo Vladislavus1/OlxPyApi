@@ -1,6 +1,6 @@
 from setuptools import setup
 
-from parser import __version__
+__version__ = "1.0.0.0"
 
 setup(
     name='OlxPyApi',
@@ -14,8 +14,5 @@ setup(
     install_requires=[
         'beautifulsoup4==4.12.3',
         'requests==2.31.0'
-    ],
-    setup_requires=[
-        'beautifulsoup4==4.12.3',
     ],
 )

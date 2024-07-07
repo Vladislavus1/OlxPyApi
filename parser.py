@@ -2,8 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 from exceptions import *
 
-__version__ = "1.0"
-
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
     "Accept-Language": "en-US,en;q=0.9",
