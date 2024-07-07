@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 __version__ = "0.0.1alpha"
 
@@ -10,8 +10,7 @@ setup(
     author='Vladislavus1',
     author_email='vlydgames@gmail.com',
 
-    include_dirs=['OlxPyApi'],
-    py_modules=['parser', 'exceptions'],
+    packages=find_packages(),
     install_requires=[
         'beautifulsoup4==4.12.3',
         'requests==2.31.0'
