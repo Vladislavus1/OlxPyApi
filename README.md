@@ -4,7 +4,7 @@ This package simplifies the extraction of data from OLX websites ([olx.ua](https
 
 ## How to use it?
 
-First of all you need to download this package to your computer system by doing this command:
+First you need to download this package to your computer system by doing this command:
 
     pip install OlxPyApi
 
@@ -16,7 +16,7 @@ You've just imported an ```OlxParser``` class. Then you need to create a class o
 
     var_name = OlxParser()
 
-```OlxParser``` has one available argument ```-logging=True/False```. Logging is responsible for printing a detailed information about parsing process.
+```OlxParser``` has one available argument ```-logging=True/False```. Logging is responsible for printing detailed information about parsing process.
 To start parsing products from OLX, you'll need to use ```OlxParser``` method called ```get_products(url)```:
 
     url_example = "https://www.olx.ua/uk/elektronika/"
@@ -30,7 +30,7 @@ After you run a code you should see this messages:
     Parsing https://www.olx.ua/uk/elektronika/?page=3 (response code: 200) (done)
     ...
     
-This messages is saying that parsing ad's urls on each page is done successfully.
+These messages are saying that parsing ad's urls on each page is done successfully.
 After that you'll start to see this messages about "Getting information":
 
     Getting information:
@@ -42,7 +42,7 @@ After that you'll start to see this messages about "Getting information":
       • https://www.olx.ua/d/uk/obyavlenie/detskiy-ingalyator-kompressornyy-microlife-neb-400-IDWeuv6 (done)
       ...
 
-Now your programm is on a phase where main information is picking.
+Now your program is on a phase where main information is picking.
 After all that ```get_products``` method will just return a list full of ```OlxAd``` class objects. ```OlxAd``` class objects contains: ```title```, ```price```, ```url```, ```images(list full of ad's images urls)```.
 Here's example:
 
@@ -63,11 +63,11 @@ As you see everything is working just fine!
 ## Error logs
 
 In rare cases you can face some errors. Some of them will give you ```error_logs.txt```, **what you need to do with them?**
-First of all, try to fix url or restart the code, if it's not working, please provide ```error_logs.txt``` to me and i will try to fix it as soon as possible.
+First, try to fix url or restart the code, if it's not working, please provide ```error_logs.txt``` to me, and I will try to fix it as soon as possible.
 
 ## Disclaimer
 
-This project is still in a phase of developing, so the risk of facing errors is really high. Anyway if you face some of them please provide it to [issues](https://github.com/Vladislavus1/OlxPyApi/issues), i will be really grateful.
+This project is still in a phase of developing, so the risk of facing errors is really high. Anyway if you face some of them please provide it to [GitHub Issues](https://github.com/Vladislavus1/OlxPyApi/issues), I will be really grateful.
 
 #
 
