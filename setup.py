@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import pathlib
 
-__version__ = "0.1.5alpha"
+__version__ = "0.0.2"
 
 HERE = pathlib.Path(__file__).parent
 
@@ -22,6 +22,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         'beautifulsoup4==4.12.3',
-        'requests==2.31.0'
+        'requests==2.31.0',
+        'lxml==5.2.2'
     ],
 )
