@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import pathlib
 
-__version__ = "0.1.0alpha"
+__version__ = "0.1.5alpha"
 
 HERE = pathlib.Path(__file__).parent
 

@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from .exceptions import *
+from exceptions import *
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 headers = {
