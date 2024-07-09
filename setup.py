@@ -1,6 +1,11 @@
 from setuptools import setup, find_packages
+import pathlib
 
-__version__ = "0.0.2alpha"
+__version__ = "0.1.0alpha"
+
+HERE = pathlib.Path(__file__).parent
+
+README = (HERE / "README.md").read_text()
 
 setup(
     name='OlxPyApi',
@@ -9,6 +14,10 @@ setup(
     url='https://github.com/Vladislavus1/OlxPyApi',
     author='Vladislavus1',
     author_email='vlydgames@gmail.com',
+
+    description='This package simplifies the extraction of data from OLX websites.',
+    long_description=README,
+    long_description_content_type='text/markdown',
 
     packages=find_packages(),
     install_requires=[
