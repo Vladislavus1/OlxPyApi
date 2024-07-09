@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-__version__ = "0.0.1alpha"
+__version__ = "0.0.2alpha"
 
 setup(
     name='OlxPyApi',
