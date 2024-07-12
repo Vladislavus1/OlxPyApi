@@ -34,16 +34,16 @@ These messages are saying that parsing ad's urls on each page is done successful
 After that you'll start to see this messages about "Getting information":
 
     Getting information:
-      • https://www.olx.ua/d/uk/obyavlenie/libertys-f12-m-b-2l-nova-kavomashina-prodazh-IDWkYXf.html (done)
-      • https://www.olx.ua/d/uk/obyavlenie/telefon-huawei-mate-30-pro-8-256gb-dual-IDWDPJw.html (done)
-      • https://www.olx.ua/d/uk/obyavlenie/novinka-bezdrotov-navushniki-arpods-3-groskop-chp-huilian-a10-IDUyrz1.html (done)
-      • https://www.olx.ua/d/uk/obyavlenie/prodam-aparat-uf-vipromnyuvannya-novator-IDTzLdy.html (done)
-      • https://www.olx.ua/d/uk/obyavlenie/blok-zhivlennya-12v-dlya-led-jinbo-jlv-12400kb-IDPSL4Y.html (done)
-      • https://www.olx.ua/d/uk/obyavlenie/detskiy-ingalyator-kompressornyy-microlife-neb-400-IDWeuv6 (done)
+      • https://www.olx.ua/d/uk/obyavlenie/libertys-f12-m-b-2l-nova-kavomashina-prodazh-IDWkYXf.html (response code: 200) (done)
+      • https://www.olx.ua/d/uk/obyavlenie/telefon-huawei-mate-30-pro-8-256gb-dual-IDWDPJw.html (response code: 200) (done)
+      • https://www.olx.ua/d/uk/obyavlenie/novinka-bezdrotov-navushniki-arpods-3-groskop-chp-huilian-a10-IDUyrz1.html (response code: 200) (done)
+      • https://www.olx.ua/d/uk/obyavlenie/prodam-aparat-uf-vipromnyuvannya-novator-IDTzLdy.html (response code: 200) (done)
+      • https://www.olx.ua/d/uk/obyavlenie/blok-zhivlennya-12v-dlya-led-jinbo-jlv-12400kb-IDPSL4Y.html (response code: 200) (done)
+      • https://www.olx.ua/d/uk/obyavlenie/detskiy-ingalyator-kompressornyy-microlife-neb-400-IDWeuv6 (response code: 200) (done)
       ...
 
 Now your program is on a phase where main information is picking.
-After all that ```get_products``` method will just return a list full of ```OlxAd``` class objects. ```OlxAd``` class objects contains: ```title```, ```price```, ```url```, ```images(list full of ad's images urls)```.
+After all that ```get_products``` method will just return a list full of ```OlxAd``` class objects. ```OlxAd``` class objects contains: ```ad_title```, ```ad_price```, ```ad_url```, ```ad_images(list full of ad's images urls)```.
 Here's example:
 
     from OlxPyApi.parser import OlxParser
@@ -51,7 +51,7 @@ Here's example:
     url_example = "https://www.olx.ua/uk/elektronika/"
     parser = OlxParser(logging=True)
     ads = parser.get_products(url_example)
-    print(ads[0].title, ads[0].price, ads[0].url, ads[0].images)
+    print(ads[0].ad_title, ads[0].ad_price, ads[0].ad_url, ads[0].ad_images)
 
 Output:
 

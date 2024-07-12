@@ -16,3 +16,10 @@ class MaxAttemptsReached(Exception):
     def __init__(self):
         self.message = f'Maximum number of retries exceeded. Error log is written to "error_logs.txt". Please provide error logs file to the developer or try to fix url'
         super().__init__(self.message)
+
+
+class InvalidOlxUrl(Exception):
+    def __init__(self, url):
+        self.url = url
+        self.message = f'"{url}" is invalid OLX url'
+        super().__init__(self.message)
