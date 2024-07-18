@@ -17,7 +17,7 @@ You've just imported an ```OlxParser``` class. Then you need to create a class o
     var_name = OlxParser()
 
 ```OlxParser``` has one available argument ```-logging=True/False```. Logging is responsible for printing detailed information about parsing process.
-To start parsing products from OLX, you'll need to use ```OlxParser``` method called ```get_products(url)```:
+To start parsing products from OLX, you'll need to use ```OlxParser``` method called ```get_products(url, amount)``` (where ```amount``` is not necessary argument):
 
     url_example = "https://www.olx.ua/uk/elektronika/"
     parser = OlxParser(logging=True)

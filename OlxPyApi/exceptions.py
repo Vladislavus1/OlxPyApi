@@ -23,3 +23,10 @@ class InvalidOlxUrl(Exception):
         self.url = url
         self.message = f'"{url}" is invalid OLX url'
         super().__init__(self.message)
+
+
+class InvalidAmount(Exception):
+    def __init__(self, amount):
+        self.amount = amount
+        self.message = f'{amount} is invalid amount of products'
+        super().__init__(self.message)

@@ -54,11 +54,14 @@ class OlxParser:
         self.max_retries = 1
         self.logs = []
 
-    def get_products(self, url):
+    def get_products(self, url, amount=0) -> list:
         base_url = f"{url.split('/')[0]}//{url.split('/')[2]}"
         ad_urls = []
         ads = []
         allowed_urls = get_allowed_urls()
+
+        if amount < 0 or type(amount) == float:
+            raise InvalidAmount(amount)
 
         if url.startswith(tuple(allowed_urls)):
             if not (url == olx_urls_example[0] or
@@ -138,7 +141,13 @@ class OlxParser:
                         if self.logging:
                             print("\nGetting information:")
                         with ThreadPoolExecutor(max_workers=4) as executor:
-                            futures = {executor.submit(get_ad_info, ad): ad for ad in ad_urls}
+                            if amount:
+                                try:
+                                    futures = {executor.submit(get_ad_info, ad_urls[ad_index]): ad_index for ad_index in range(amount)}
+                                except IndexError:
+                                    futures = {executor.submit(get_ad_info, ad): ad for ad in ad_urls}
+                            else:
+                                futures = {executor.submit(get_ad_info, ad): ad for ad in ad_urls}
                             for future in as_completed(futures):
                                 try:
                                     future.result()
